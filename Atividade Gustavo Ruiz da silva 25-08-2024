@@ -1,0 +1,41 @@
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+
+        // Solicitando o nome
+        System.out.println("Digite o seu nome:");
+        String nome = leitor.nextLine(); 
+
+        // Solicitando a idade e transformando a string para int com o código Integer.parseInt
+        System.out.println("\nDigite sua idade:");
+        int idade = Integer.parseInt(leitor.nextLine());
+
+        // Solicitando a compra e transformando a string para int com o código Integer.parseInt
+        System.out.println("\nDigite o valor de sua compra:");
+        int compra = Integer.parseInt(leitor.nextLine());
+
+        if (idade >= 21) {
+            if (compra < 1000) {
+                double porcentagem = compra*0.05;
+                
+                System.out.println("\nCliente: " + nome + "\nIdade: " + idade + "\nValor do Cashback: R$ " + porcentagem);
+            } else {
+                double porcentagem2 = compra*0.07;
+                System.out.println("\nCliente: " + nome + "\nIdade: " + idade + "\nValor do Cashback: R$ " + porcentagem2);
+            }
+        } else {
+            if (compra < 1000) {
+                double porcentagem3 = compra*0.07;
+                System.out.println("\nCliente: " + nome + "\nIdade: " + idade + "\nValor do Cashback: R$ " + porcentagem3);
+            } else {
+               double porcentagem4 = compra*0.10;
+                System.out.println("\nCliente: " + nome + "\nIdade: " + idade + "\nValor do Cashback: R$ " + porcentagem4);
+            }
+        }
+    }
+}
+
